@@ -1,0 +1,37 @@
+#factors -  1, 2, 4, 5, 8, 10, 16, 20, 25, 40, 50, 80, 100, 200 and 400.
+#factorsprime  2 ,5 
+
+
+import math
+def allPrimesUpto(num):
+        a =  int(math.sqrt(num))
+        print(a)
+        factors = []
+        primefactors = []
+        for f in range(2,int(a)+1):
+            print(int(a)+1)
+            print(a,f)
+            
+            if num % f == 0:
+                factors.append(f)
+            else:
+                pass
+        print (factors)
+        for b in factors:
+            print (f"Iterating {b}")
+            isPrime = True
+            for i in range(2, int(b*1/2)+1):
+                print (b, i)
+                if b % i == 0:
+                    isPrime = False
+            if (isPrime == True):
+                print (f"Appending - {b}")
+                primefactors.append(b)
+                
+        print(f"Prime factors of {num} - {primefactors}")                   
+               
+allPrimesUpto(700)                   
+                   
+               
+    
+#prime numbers between 4-16 are 5,7,11,13
